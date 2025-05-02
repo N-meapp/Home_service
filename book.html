@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Add this in <head> -->
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="./static/css/style.css">
+
+      </head>
+      
+<body>
+
+  
+<!-- Navbar -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out bg-transparent text-black">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-6 md:py-10">
+
+      <!-- Logo -->
+      <div class="text-xl font-bold">MyLogo</div>
+
+      <!-- Center Nav Links (Desktop) -->
+      <ul class="hidden md:flex space-x-6 font-medium">
+        <li><a href="index.html" class="nav-link text-black hover:text-blue-500">Home</a></li>
+        <li><a href="about.html" class="nav-link text-black hover:text-blue-500">About</a></li>
+        <li><a href="services.html" class="nav-link text-black hover:text-blue-500">Services</a></li>
+        <li><a href="contact.html" class="nav-link text-black hover:text-blue-500">Contact</a></li>
+      </ul>
+
+      <!-- CTA Button (Desktop) -->
+      <div class="hidden md:block">
+        <a href="book.html" class="cta-btn px-4 py-2 bg-[#003393] text-white rounded hover:bg-blue-700 text-sm">Book Now</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+<div class="md:hidden">
+  <button id="mobile-menu-button" class="focus:outline-none">
+    <svg id="menu-icon" class="w-6 h-6 text-white transition-colors duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
+</div>
+
+    </div>
+
+    <!-- Mobile Nav Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white text-black px-6 py-4 space-y-4">
+      <a href="index.html" class="block hover:text-blue-500">Home</a>
+      <a href="about.html" class="block hover:text-blue-500">About</a>
+      <a href="services.html" class="block hover:text-blue-500">Services</a>
+      <a href="contact.html" class="block hover:text-blue-500">Contact</a>
+      <a href="book.html" class="inline-block px-4 py-2 bg-[#003393] text-white rounded hover:bg-blue-700 text-sm">Book Now</a>
+    </div>
+  </nav>
+    
+
+
+  <div class="bg-[#003393] w-full h-44 mt-[88px] flex flex-col  justify-center text-white px-[9.5rem] max-md:px-6">
+    <h1 class="text-3xl font-semibold mb-2">Book a Service</h1>
+    <p class="text-sm flex items-center gap-2">
+      <a href="/" class="hover:underline">Home</a>
+      <span>&rarr;</span>
+      <span>Book Now</span>
+    </p>
+  </div>
+  
+
+
+
+
+
+
+  <section class="py-16 px-4 ">
+    <div class="max-w-5xl mx-auto bg-gray-50 p-10 rounded-md">
+      <h3 class="text-sm text-[#003393] mb-1 uppercase tracking-wide text-center">Book Now</h3>
+      <h2 class="text-3xl  text-gray-800 mb-6 text-center">Schedule Your Home Cleaning</h2>
+  
+      <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Full Name -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+          <input type="text" placeholder="Your full name" class="w-full border border-gray-300 p-3 rounded-lg" required>
+        </div>
+  
+        <!-- Email -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input type="email" placeholder="you@example.com" class="w-full border border-gray-300 p-3 rounded-lg" required>
+        </div>
+  
+        <!-- Phone -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+          <input type="tel" placeholder="+1234567890" class="w-full border border-gray-300 p-3 rounded-lg" required>
+        </div>
+  
+        <!-- City -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">City</label>
+          <input type="text" placeholder="e.g., Mumbai" class="w-full border border-gray-300 p-3 rounded-lg" required>
+        </div>
+  
+        <!-- Pincode -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Pincode</label>
+          <input type="text" placeholder="e.g., 400001" class="w-full border border-gray-300 p-3 rounded-lg" required>
+        </div>
+  
+        <!-- Preferred Time -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Time</label>
+          <select class="w-full border border-gray-300 p-3 rounded-lg">
+            <option>Select Time</option>
+            <option>08:00 AM - 10:00 AM</option>
+            <option>10:00 AM - 12:00 PM</option>
+            <option>12:00 PM - 02:00 PM</option>
+            <option>02:00 PM - 04:00 PM</option>
+            <option>04:00 PM - 06:00 PM</option>
+          </select>
+        </div>
+  
+        <!-- Address -->
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium text-gray-700 mb-1">Address</label>
+          <textarea rows="2" placeholder="Street, Apartment, Landmark..." class="w-full border border-gray-300 p-3 rounded-lg" required></textarea>
+        </div>
+  
+        <!-- Book for multiple days checkbox -->
+        <div class="md:col-span-2 flex items-center space-x-2">
+          <input type="checkbox" id="multiDay" class="h-4 w-4 text-blue-600 border-gray-300 rounded">
+          <label for="multiDay" class="text-sm text-gray-700">Book for more than one day</label>
+        </div>
+  
+        <!-- Date / From-To Fields -->
+        <div id="singleDate" class="md:col-span-1">
+          <label class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+          <input type="date" class="w-full border border-gray-300 p-3 rounded-lg">
+        </div>
+  
+        <div id="multiDateFields" class="md:col-span-2 hidden grid grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">From Date</label>
+            <input type="date" class="w-full border border-gray-300 p-3 rounded-lg">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">To Date</label>
+            <input type="date" class="w-full border border-gray-300 p-3 rounded-lg">
+          </div>
+        </div>
+  
+        <!-- Service Type -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Service Type</label>
+          <select class="w-full border border-gray-300 p-3 rounded-lg">
+            <option>Select Service</option>
+            <option>Standard Cleaning</option>
+            <option>Deep Cleaning</option>
+            <option>Move-In/Move-Out</option>
+            <option>Post-Construction</option>
+          </select>
+        </div>
+  
+        <!-- Submit -->
+        <div class="md:col-span-2">
+          <button type="submit" class="w-full bg-[#003393] text-white p-3 rounded-lg hover:bg-blue-800 transition">
+            Book Now
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+  <script>
+    const multiDayCheckbox = document.getElementById("multiDay");
+    const multiDateFields = document.getElementById("multiDateFields");
+    const singleDate = document.getElementById("singleDate");
+  
+    multiDayCheckbox.addEventListener("change", () => {
+      if (multiDayCheckbox.checked) {
+        multiDateFields.classList.remove("hidden");
+        singleDate.classList.add("hidden");
+      } else {
+        multiDateFields.classList.add("hidden");
+        singleDate.classList.remove("hidden");
+      }
+    });
+  </script>
+  
+  
+
+
+
+
+  
+
+<footer class="bg-gray-900 text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-[15px]">
+  
+      <!-- Logo & Description -->
+      <div>
+        <img src="/logo.png" alt="Shifa Home Services" class="w-36 mb-4">
+        <p class="text-gray-400">
+          Shifa is your trusted partner for professional, reliable home cleaning and maintenance services.
+        </p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#" class="hover:text-white transition">Home</a></li>
+          <li><a href="#" class="hover:text-white transition">About Us</a></li>
+          <li><a href="#" class="hover:text-white transition">Services</a></li>
+          <li><a href="#" class="hover:text-white transition">Packages</a></li>
+          <li><a href="#" class="hover:text-white transition">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contact</h3>
+        <p class="text-white flex items-start gap-3 mb-2">
+          <svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M164.39,145.34a8,8,0,0,1,7.59-.69l47.16,21.13a8,8,0,0,1,4.8,8.3A48.33,48.33,0,0,1,176,216,136,136,0,0,1,40,80,48.33,48.33,0,0,1,81.92,32.06a8,8,0,0,1,8.3,4.8l21.13,47.2a8,8,0,0,1-.66,7.53L89.32,117a7.93,7.93,0,0,0-.54,7.81c8.27,16.93,25.77,34.22,42.75,42.41a7.92,7.92,0,0,0,7.83-.59Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+          +91 98765 43210
+        </p>
+        <p class="text-white flex items-start gap-3 mb-2">
+          <svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M32,56H224a0,0,0,0,1,0,0V192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V56A0,0,0,0,1,32,56Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><polyline points="224 56 128 144 32 56" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+          support@shifaservices.com
+        </p>
+        <p class="text-white flex items-start gap-3">
+          <svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><circle cx="128" cy="104" r="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M208,104c0,72-80,128-80,128S48,176,48,104a80,80,0,0,1,160,0Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+          123 Shifa Lane, New Delhi
+        </p>
+      </div>
+  
+      <!-- Social Media -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+        <div class="flex space-x-3">
+          <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Facebook">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22 12a10 10 0 10-11.63 9.87v-6.99h-2.1v-2.88h2.1v-2.2c0-2.08 1.24-3.23 3.13-3.23.91 0 1.86.16 1.86.16v2.04h-1.05c-1.04 0-1.36.64-1.36 1.3v1.56h2.32l-.37 2.88h-1.95V21.87A10 10 0 0022 12z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Twitter">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.4 1a9.1 9.1 0 01-2.83 1.08 4.48 4.48 0 00-7.64 4.1A12.71 12.71 0 013 4.1a4.48 4.48 0 001.38 6A4.41 4.41 0 012 9v.05a4.48 4.48 0 003.6 4.4 4.48 4.48 0 01-2 .08 4.48 4.48 0 004.18 3.12A9 9 0 012 19.54a12.67 12.67 0 006.29 1.84c7.55 0 11.69-6.29 11.69-11.75 0-.18 0-.35-.01-.53A8.18 8.18 0 0023 3z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Instagram">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zM12 8a4 4 0 100 8 4 4 0 000-8zm5-1a1 1 0 110 2 1 1 0 010-2z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition" aria-label="LinkedIn">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4zM8 8h3.6v2.2H11c.5-1 2-2 4.3-2 4.6 0 5.7 3 5.7 6.8V24h-4v-6.7c0-1.6-.1-3.7-2.3-3.7-2.3 0-2.7 1.8-2.7 3.6V24H8z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Horizontal Line & Copyright -->
+    <div class="border-t border-gray-700 mt-12 pt-6 text-center text-[14px] text-gray-500">
+      &copy; 2025 Shifa Home Services. All rights reserved.
+    </div>
+  </footer>
+  
+  
+<script src="./static/js/script.js"></script>
+
+
+
+</body>
+</html>
