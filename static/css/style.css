@@ -4,12 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Override Tailwind base layer */
+
 @layer base {
   body {
     font-family: unset;
   }
 }
 .not-emoji {
-  font-family: sans-serif; /* Forces regular font instead of emoji */
+  font-family: sans-serif; 
 }

@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.tailwindcss.com"></script>
 
-        <!-- Add this in <head> -->
             <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
             <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,46 +16,42 @@
 <body>
 
   
-<!-- Navbar -->
 <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out bg-transparent text-black">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-6 md:py-10">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-6 md:py-10">
 
-      <!-- Logo -->
-      <div class="text-xl font-bold">MyLogo</div>
+    <div class="text-xl font-bold">MyLogo</div>
 
-      <!-- Center Nav Links (Desktop) -->
-      <ul class="hidden md:flex space-x-6 font-medium">
-        <li><a href="index.html" class="nav-link text-black hover:text-blue-500">Home</a></li>
-        <li><a href="about.html" class="nav-link text-black hover:text-blue-500">About</a></li>
-        <li><a href="services.html" class="nav-link text-black hover:text-blue-500">Services</a></li>
-        <li><a href="contact.html" class="nav-link text-black hover:text-blue-500">Contact</a></li>
-      </ul>
+    <ul class="hidden md:flex space-x-6 font-medium">
+      <li><a href="index.html" class="nav-link text-black hover:text-blue-500">Home</a></li>
+      <li><a href="about.html" class="nav-link text-black hover:text-blue-500">About</a></li>
+      <li><a href="packages.html" class="nav-link text-black hover:text-blue-500">Packages</a></li>
+      <li><a href="services.html" class="nav-link text-black hover:text-blue-500">Services</a></li>
+      <li><a href="contact.html" class="nav-link text-black hover:text-blue-500">Contact</a></li>
+    </ul>
 
-      <!-- CTA Button (Desktop) -->
-      <div class="hidden md:block">
-        <a href="book.html" class="cta-btn px-4 py-2 bg-[#003393] text-white rounded hover:bg-blue-700 text-sm">Book Now</a>
-      </div>
+    <div class="hidden md:block">
+      <a href="book.html" class="cta-btn px-4 py-2 bg-[#003393] text-white rounded hover:bg-blue-700 text-sm">Book Now</a>
+    </div>
 
-      <!-- Mobile Menu Button -->
 <div class="md:hidden">
-  <button id="mobile-menu-button" class="focus:outline-none">
-    <svg id="menu-icon" class="w-6 h-6 text-white transition-colors duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-    </svg>
-  </button>
+<button id="mobile-menu-button" class="focus:outline-none">
+  <svg id="menu-icon" class="w-6 h-6 text-white transition-colors duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+  </svg>
+</button>
 </div>
 
-    </div>
+  </div>
 
-    <!-- Mobile Nav Menu -->
-    <div id="mobile-menu" class="md:hidden hidden bg-white text-black px-6 py-4 space-y-4">
-      <a href="index.html" class="block hover:text-blue-500">Home</a>
-      <a href="about.html" class="block hover:text-blue-500">About</a>
-      <a href="services.html" class="block hover:text-blue-500">Services</a>
-      <a href="contact.html" class="block hover:text-blue-500">Contact</a>
-      <a href="book.html" class="inline-block px-4 py-2 bg-[#003393] text-white rounded hover:bg-blue-700 text-sm">Book Now</a>
-    </div>
-  </nav>
+  <div id="mobile-menu" class="md:hidden hidden bg-white text-black px-6 py-4 space-y-4">
+    <a href="index.html" class="block hover:text-blue-500">Home</a>
+    <a href="about.html" class="block hover:text-blue-500">About</a>
+    <a href="packages.html" class="block hover:text-blue-500">Packages</a>
+    <a href="services.html" class="block hover:text-blue-500">Services</a>
+    <a href="contact.html" class="block hover:text-blue-500">Contact</a>
+    <a href="book.html" class="inline-block px-4 py-2 bg-[#003393] text-white rounded hover:bg-blue-700 text-sm">Book Now</a>
+  </div>
+</nav>
     
 
 
@@ -81,37 +76,32 @@
       <h2 class="text-3xl  text-gray-800 mb-6 text-center">Schedule Your Home Cleaning</h2>
   
       <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Full Name -->
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
           <input type="text" placeholder="Your full name" class="w-full border border-gray-300 p-3 rounded-lg" required>
         </div>
   
-        <!-- Email -->
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
           <input type="email" placeholder="you@example.com" class="w-full border border-gray-300 p-3 rounded-lg" required>
         </div>
   
-        <!-- Phone -->
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
           <input type="tel" placeholder="+1234567890" class="w-full border border-gray-300 p-3 rounded-lg" required>
         </div>
   
-        <!-- City -->
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-1">City</label>
           <input type="text" placeholder="e.g., Mumbai" class="w-full border border-gray-300 p-3 rounded-lg" required>
         </div>
   
-        <!-- Pincode -->
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-1">Pincode</label>
           <input type="text" placeholder="e.g., 400001" class="w-full border border-gray-300 p-3 rounded-lg" required>
         </div>
   
-        <!-- Preferred Time -->
+       
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Time</label>
           <select class="w-full border border-gray-300 p-3 rounded-lg">
@@ -124,19 +114,17 @@
           </select>
         </div>
   
-        <!-- Address -->
+        
         <div class="md:col-span-2">
           <label class="block text-sm font-medium text-gray-700 mb-1">Address</label>
           <textarea rows="2" placeholder="Street, Apartment, Landmark..." class="w-full border border-gray-300 p-3 rounded-lg" required></textarea>
         </div>
   
-        <!-- Book for multiple days checkbox -->
         <div class="md:col-span-2 flex items-center space-x-2">
           <input type="checkbox" id="multiDay" class="h-4 w-4 text-blue-600 border-gray-300 rounded">
           <label for="multiDay" class="text-sm text-gray-700">Book for more than one day</label>
         </div>
   
-        <!-- Date / From-To Fields -->
         <div id="singleDate" class="md:col-span-1">
           <label class="block text-sm font-medium text-gray-700 mb-1">Date</label>
           <input type="date" class="w-full border border-gray-300 p-3 rounded-lg">
@@ -153,7 +141,6 @@
           </div>
         </div>
   
-        <!-- Service Type -->
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-1">Service Type</label>
           <select class="w-full border border-gray-300 p-3 rounded-lg">
@@ -165,7 +152,6 @@
           </select>
         </div>
   
-        <!-- Submit -->
         <div class="md:col-span-2">
           <button type="submit" class="w-full bg-[#003393] text-white p-3 rounded-lg hover:bg-blue-800 transition">
             Book Now
@@ -175,21 +161,7 @@
     </div>
   </section>
   
-  <script>
-    const multiDayCheckbox = document.getElementById("multiDay");
-    const multiDateFields = document.getElementById("multiDateFields");
-    const singleDate = document.getElementById("singleDate");
-  
-    multiDayCheckbox.addEventListener("change", () => {
-      if (multiDayCheckbox.checked) {
-        multiDateFields.classList.remove("hidden");
-        singleDate.classList.add("hidden");
-      } else {
-        multiDateFields.classList.add("hidden");
-        singleDate.classList.remove("hidden");
-      }
-    });
-  </script>
+
   
   
 
@@ -201,7 +173,7 @@
 <footer class="bg-gray-900 text-white py-16 px-6">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-[15px]">
   
-      <!-- Logo & Description -->
+   
       <div>
         <img src="/logo.png" alt="Shifa Home Services" class="w-36 mb-4">
         <p class="text-gray-400">
@@ -209,7 +181,7 @@
         </p>
       </div>
   
-      <!-- Quick Links -->
+    
       <div>
         <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
         <ul class="space-y-2 text-gray-400">
@@ -221,7 +193,7 @@
         </ul>
       </div>
   
-      <!-- Contact Info -->
+
       <div>
         <h3 class="text-lg font-semibold mb-4">Contact</h3>
         <p class="text-white flex items-start gap-3 mb-2">
@@ -238,7 +210,7 @@
         </p>
       </div>
   
-      <!-- Social Media -->
+
       <div>
         <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
         <div class="flex space-x-3">
@@ -266,13 +238,38 @@
       </div>
     </div>
   
-    <!-- Horizontal Line & Copyright -->
+
     <div class="border-t border-gray-700 mt-12 pt-6 text-center text-[14px] text-gray-500">
       &copy; 2025 Shifa Home Services. All rights reserved.
     </div>
   </footer>
   
+ 
   
+
+
+
+
+
+
+
+
+
+  <script>
+    const multiDayCheckbox = document.getElementById("multiDay");
+    const multiDateFields = document.getElementById("multiDateFields");
+    const singleDate = document.getElementById("singleDate");
+  
+    multiDayCheckbox.addEventListener("change", () => {
+      if (multiDayCheckbox.checked) {
+        multiDateFields.classList.remove("hidden");
+        singleDate.classList.add("hidden");
+      } else {
+        multiDateFields.classList.add("hidden");
+        singleDate.classList.remove("hidden");
+      }
+    });
+  </script>
 <script src="./static/js/script.js"></script>
 
 

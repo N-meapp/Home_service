@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.tailwindcss.com"></script>
 
-        <!-- Add this in <head> -->
+     
             <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
             <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -16,33 +16,30 @@
       
 <body class="h-full">
 
-<!-- Hero Section with Background Image -->
+
 <div class="relative bg-cover bg-center h-screen max-md:h-[50rem]" style="background-image: url('./static/images/hero.jpeg');">
 
-  <!-- Black Overlay -->
+ 
   <div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
-  <!-- Navbar -->
   <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out bg-transparent text-white">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-6 md:py-10">
 
-      <!-- Logo -->
       <div class="text-xl font-bold">MyLogo</div>
 
-      <!-- Center Nav Links (Desktop) -->
       <ul class="hidden md:flex space-x-6 font-medium">
-        <li><a href="index.html" class="nav-link text-black hover:text-blue-500">Home</a></li>
-        <li><a href="about.html" class="nav-link text-black hover:text-blue-500">About</a></li>
-        <li><a href="services.html" class="nav-link text-black hover:text-blue-500">Services</a></li>
-        <li><a href="contact.html" class="nav-link text-black hover:text-blue-500">Contact</a></li>
+        <li><a href="index.html" class="nav-link text-white hover:text-blue-500">Home</a></li>
+        <li><a href="about.html" class="nav-link text-white hover:text-blue-500">About</a></li>
+        <li><a href="packages.html" class="nav-link text-white hover:text-blue-500">Packages</a></li>
+        <li><a href="services.html" class="nav-link text-white hover:text-blue-500">Services</a></li>
+        <li><a href="contact.html" class="nav-link text-white hover:text-blue-500">Contact</a></li>
       </ul>
 
-      <!-- CTA Button (Desktop) -->
       <div class="hidden md:block">
+        
         <a href="book.html" class="cta-btn px-4 py-2 bg-[#003393] text-white rounded hover:bg-blue-700 text-sm">Book Now</a>
       </div>
 
-      <!-- Mobile Menu Button -->
 <div class="md:hidden">
   <button id="mobile-menu-button" class="focus:outline-none">
     <svg id="menu-icon" class="w-6 h-6 text-white transition-colors duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -53,22 +50,20 @@
 
     </div>
 
-    <!-- Mobile Nav Menu -->
     <div id="mobile-menu" class="md:hidden hidden bg-white text-black px-6 py-4 space-y-4">
       <a href="index.html" class="block hover:text-blue-500">Home</a>
       <a href="about.html" class="block hover:text-blue-500">About</a>
+      <a href="packages.html" class="block hover:text-blue-500">Packages</a>
       <a href="services.html" class="block hover:text-blue-500">Services</a>
       <a href="contact.html" class="block hover:text-blue-500">Contact</a>
       <a href="book.html" class="inline-block px-4 py-2 bg-[#003393] text-white rounded hover:bg-blue-700 text-sm">Book Now</a>
     </div>
   </nav>
 
-  <!-- Line Under Navbar -->
   <div class="relative z-10 max-w-7xl mx-auto px-8 pt-[100px]">
     <hr class="border-t border-gray-300/40 " />
   </div>
 
-  <!-- Hero Content -->
   <div class="relative z-10 flex items-center h-screen max-w-7xl mx-auto px-8">
     <div class="max-w-6xl text-left text-white">
       <h1 class="text-4xl md:text-7xl font-bold mb-6 leading-loose p-4 max-md:mt-[-10rem]" style="line-height:1.3;">
@@ -82,55 +77,7 @@
   </div>
 </div>
 
-<script>
-  const navbar = document.getElementById("navbar");
-  const links = document.querySelectorAll(".nav-link");
-  const menuBtn = document.getElementById("mobile-menu-button");
-  const menuIcon = document.getElementById("menu-icon");
-  const mobileMenu = document.getElementById("mobile-menu");
 
-  // Scroll behavior
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      navbar.classList.remove("bg-transparent", "text-white");
-      navbar.classList.add("bg-white", "text-black", "shadow-md");
-
-      links.forEach(link => {
-        link.classList.remove("text-white");
-        link.classList.add("text-black");
-      });
-
-      // Change menu icon color to black
-      menuIcon.classList.remove("text-white");
-      menuIcon.classList.add("text-black");
-    } else {
-      navbar.classList.remove("bg-white", "text-black", "shadow-md");
-      navbar.classList.add("bg-transparent", "text-white");
-
-      links.forEach(link => {
-        link.classList.remove("text-black");
-        link.classList.add("text-white");
-      });
-
-      // Change menu icon back to white
-      menuIcon.classList.remove("text-black");
-      menuIcon.classList.add("text-white");
-    }
-  });
-
-  // Toggle mobile menu
-  menuBtn.addEventListener("click", (e) => {
-    e.stopPropagation(); // Prevent immediate close on click
-    mobileMenu.classList.toggle("hidden");
-  });
-
-  // Close mobile menu when clicking outside
-  document.addEventListener("click", (e) => {
-    if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-      mobileMenu.classList.add("hidden");
-    }
-  });
-</script>
 
 
 
@@ -142,7 +89,6 @@
 <section class="w-full bg-white py-16 overflow-hidden">
   <div class="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-4 sm:px-6 gap-10 md:gap-x-20">
 
-    <!-- Left side: Heading and Paragraph -->
     <div class="w-full md:w-[44%] text-center md:text-left">
       <h2 class="text-3xl sm:text-4xl md:text-5xl text-gray-600 leading-snug mb-6">
         We Turn Your Home Into a Sparkling Sanctuary
@@ -155,7 +101,6 @@
       </a>
     </div>
 
-    <!-- Right side: Two Images -->
     <div class="w-full md:w-[50%] flex flex-col sm:flex-row gap-6 justify-center items-center">
       <img src="https://img.freepik.com/free-photo/side-view-man-cleaning-indoors_23-2150454553.jpg" 
            alt="Cleaning in Progress" 
@@ -174,10 +119,8 @@
   
 <section class="relative bg-[#003393] h-[28rem] pb-40 pt-16  md:mb-0 max-md:h-[32rem]">
 
-  <!-- Content Container -->
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10 md:gap-32 px-6 md:px-20">
     
-    <!-- Left: Label + Heading -->
     <div class="md:w-[40%]">
       <p class="text-sm uppercase text-white">Our Services</p>
       <h2 class="text-4xl text-white leading-snug">
@@ -185,7 +128,6 @@
       </h2>
     </div>
 
-    <!-- Right: Line + Paragraph -->
     <div class="md:w-[60%] flex items-start gap-4">
       <div class="w-1 h-20 bg-[#003393] mt-1"></div>
       <p class="text-white text-lg leading-relaxed">
@@ -194,12 +136,10 @@
     </div>
   </div>
 
-  <!-- Cards Section - Positioned Half Outside -->
   <div class="absolute left-1/2 transform -translate-x-1/2 w-full px-6">
     <div class="max-w-7xl mx-auto overflow-x-auto">
       <div class="flex flex-col md:flex-row justify-between gap-10 px-6 md:px-20 min-w-[320px] md:min-w-0 max-md:mt-[2rem] mt-[4rem]">
 
-        <!-- Card 1 -->
         <div class="relative w-full md:w-1/3 h-[300px] overflow-hidden flex-shrink-0">
           <img src="https://img.freepik.com/free-photo/full-shot-people-cleaning-office_23-2150454568.jpg"
                alt="Trusted Team"
@@ -209,7 +149,6 @@
           </div>
         </div>
 
-        <!-- Card 2 -->
         <div class="relative w-full md:w-1/3 h-[300px] overflow-hidden flex-shrink-0">
           <img src="https://img.freepik.com/free-photo/man-giving-some-keys-woman_23-2148252120.jpg"
                alt="Eco-Friendly Products"
@@ -219,7 +158,6 @@
           </div>
         </div>
 
-        <!-- Card 3 -->
         <div class="relative w-full md:w-1/3 h-[300px] overflow-hidden flex-shrink-0">
           <img src="https://img.freepik.com/free-photo/front-view-woman-cleaning-home_23-2150453344.jpg"
                alt="Flexible Scheduling"
@@ -231,7 +169,6 @@
 
       </div>
 
-      <!-- "More" Link -->
       <div class="w-full flex justify-end pr-6 md:pr-20 mt-6">
         <a href="services.html"
            class="px-6 py-2 mt-10 bg-[#003393] text-white rounded-lg shadow-md hover:bg-white hover:text-[#003393] transition-all duration-300">
@@ -244,7 +181,6 @@
 
     
 
-  <!-- Title Section -->
 <div class="mt-64 px-6 md:px-52 max-md:mt-[70rem]">
   <h2 class="text-sm uppercase text-[#003393]">Why Choose Us</h2>
   <p class="text-4xl md:text-5xl max-w-5xl text-gray-600 leading-snug mb-6">
@@ -252,15 +188,12 @@
   </p>
 </div>
 
-<!-- Content Section -->
 <div class="w-[90%] mx-auto max-md:w-full flex flex-col lg:flex-row justify-between gap-10 lg:gap-20 mt-20 px-10  md:px-44">
-  <!-- Left: Image -->
   <div class="w-full h-full flex justify-center">
     <img src="https://img.freepik.com/free-photo/professional-cleaning-service-people-working-together-office_23-2150520596.jpg?uid=R181481712&ga=GA1.1.1134808614.1740556455&semt=ais_hybrid&w=740" 
          class="w-full max-w-[800px] h-auto lg:h-[500px] object-cover rounded-md">
   </div>
 
-  <!-- Right: Reasons -->
   <div class="w-full h-full flex flex-col justify-center my-auto px-0 lg:px-10">
     <h3 class="text-2xl text-[#003393] mb-6">Why Homeowners Trust Us</h3>
     <ul class="space-y-4">
@@ -297,14 +230,11 @@
 
     <section class=" mt-24 relative bg-fixed bg-center bg-cover bg-no-repeat" style="background-image: url('https://img.freepik.com/free-photo/front-view-man-cleaning-indoors_23-2150454484.jpg?uid=R181481712&ga=GA1.1.1134808614.1740556455&semt=ais_hybrid&w=740');">
   
-      <!-- Black overlay -->
       <div class="absolute inset-0 bg-[#003393]/30 z-0"></div>
     
-      <!-- Content -->
       <div class="relative z-10 py-20 px-6">
         <div class="max-w-7xl mx-auto">
     
-          <!-- Heading -->
           <div class="text-center mb-12 text-white">
 
 
@@ -313,10 +243,8 @@
             
           </div>
     
-          <!-- Cards Grid -->
           <div class="grid md:grid-cols-3 gap-10">
             
-            <!-- Card 1 -->
             <div class="bg-white rounded-md  overflow-hidden">
               <img src="https://img.freepik.com/free-photo/3d-rendering-beautiful-luxury-bedroom-suite-hotel-with-working-table_105762-2154.jpg" alt="1 Bedroom" class="w-full h-56 object-cover">
               <div class="p-6">
@@ -327,7 +255,6 @@
               </div>
             </div>
     
-            <!-- Card 2 -->
             <div class="bg-white rounded-md overflow-hidden">
               <img src="https://img.freepik.com/free-photo/3d-rendering-loft-luxury-living-room-with-bookshelf-near-bookshelf_105762-2224.jpg" alt="2 BHK" class="w-full h-56 object-cover">
               <div class="p-6">
@@ -338,7 +265,6 @@
               </div>
             </div>
     
-            <!-- Card 3 -->
             <div class="bg-white rounded-md overflow-hidden">
               <img src="https://img.freepik.com/free-photo/loft-luxury-living-room-with-bookshelf-near-dining-table_105762-1796.jpg" alt="3 BHK" class="w-full h-56 object-cover">
               <div class="p-6">
@@ -352,8 +278,8 @@
           </div>
         </div>
         <div class="flex justify-center">
-          <a href="#" class="mt-20 inline-block px-5 py-3 bg-[#003393] text-center text-white rounded-lg shadow-md hover:bg-blue-800 transition duration-300">
-            Book Your Cleaning
+          <a href="packages.html" class="mt-20 inline-block px-5 py-3 bg-[#003393] text-center text-white rounded-lg shadow-md hover:bg-blue-800 transition duration-300">
+            See more packages
           </a>
         </div>
         
@@ -371,7 +297,6 @@
     <section class="py-20 px-6 relative">
       <div class="max-w-7xl mx-auto">
         
-        <!-- Heading -->
         <div class="mb-12">
           <h2 class="text-sm uppercase text-[#003393] mb-2">Testimonials</h2>
           <p class="text-5xl max-w-5xl text-gray-600 leading-snug">
@@ -379,16 +304,12 @@
           </p>
         </div>
     
-        <!-- Arrows -->
         <button id="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-3xl text-[#003393] font-bold z-10 max-md:top-[63%] max-md:left-[0.5rem]">&#10094;</button>
         <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-3xl text-[#003393] font-bold z-10 max-md:top-[63%] max-md:right-[0.5rem]">&#10095;</button>
     
-        <!-- Testimonials Container -->
         <div id="testimonialSlider" class="flex gap-6 overflow-hidden transition-all duration-500">
-          <!-- Cards inserted by JS -->
         </div>
     
-        <!-- Add Testimonial Button -->
         <div class="mt-10 text-left">
           <button onclick="openModal()" class="bg-[#003393] text-white px-6 py-2 rounded-md hover:bg-[#002973] transition">
             + Add Testimonial
@@ -396,7 +317,6 @@
         </div>
       </div>
     
-      <!-- Modal Form -->
       <div id="testimonialModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
         <div class="bg-white p-6 rounded-md w-full max-w-md">
           <h3 class="text-xl font-semibold mb-4 text-gray-800">Add Your Testimonial</h3>
@@ -412,196 +332,314 @@
       </div>
     </section>
     
-    <script>
-      const testimonials = [
-        {
-          name: "Aisha Khan",
-          location: "New Delhi",
-          img: "https://randomuser.me/api/portraits/women/44.jpg",
-          message: "The Shifa team was amazing! My house has never looked better. I’m definitely booking again."
-        },
-        {
-          name: "Rahul Mehta",
-          location: "Gurgaon",
-          img: "https://randomuser.me/api/portraits/men/32.jpg",
-          message: "Professional, punctual, and extremely thorough. Their deep cleaning service is top-notch."
-        },
-        {
-          name: "Neha Verma",
-          location: "Noida",
-          img: "https://randomuser.me/api/portraits/women/65.jpg",
-          message: "Easy to book and great customer service. They handled my move-out cleaning perfectly!"
-        },
-        {
-          name: "Ajay Singh",
-          location: "Delhi",
-          img: "https://randomuser.me/api/portraits/men/45.jpg",
-          message: "Top-class team! Courteous and hardworking staff."
-        }
-      ];
+ 
     
-      let startIndex = 0;
+        
     
-      function getVisibleCardCount() {
-        return window.innerWidth < 768 ? 1 : 3;
+    
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="bg-gray-900 text-white py-16 px-6">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-[15px]">
+    
+     
+        <div>
+          <img src="/logo.png" alt="Shifa Home Services" class="w-36 mb-4">
+          <p class="text-gray-400">
+            Shifa is your trusted partner for professional, reliable home cleaning and maintenance services.
+          </p>
+        </div>
+    
+      
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white transition">Home</a></li>
+            <li><a href="#" class="hover:text-white transition">About Us</a></li>
+            <li><a href="#" class="hover:text-white transition">Services</a></li>
+            <li><a href="#" class="hover:text-white transition">Packages</a></li>
+            <li><a href="#" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+    
+  
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contact</h3>
+          <p class="text-white flex items-start gap-3 mb-2">
+            <svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M164.39,145.34a8,8,0,0,1,7.59-.69l47.16,21.13a8,8,0,0,1,4.8,8.3A48.33,48.33,0,0,1,176,216,136,136,0,0,1,40,80,48.33,48.33,0,0,1,81.92,32.06a8,8,0,0,1,8.3,4.8l21.13,47.2a8,8,0,0,1-.66,7.53L89.32,117a7.93,7.93,0,0,0-.54,7.81c8.27,16.93,25.77,34.22,42.75,42.41a7.92,7.92,0,0,0,7.83-.59Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+            +91 98765 43210
+          </p>
+          <p class="text-white flex items-start gap-3 mb-2">
+            <svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M32,56H224a0,0,0,0,1,0,0V192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V56A0,0,0,0,1,32,56Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><polyline points="224 56 128 144 32 56" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+            support@shifaservices.com
+          </p>
+          <p class="text-white flex items-start gap-3">
+            <svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><circle cx="128" cy="104" r="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M208,104c0,72-80,128-80,128S48,176,48,104a80,80,0,0,1,160,0Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+            123 Shifa Lane, New Delhi
+          </p>
+        </div>
+    
+  
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+          <div class="flex space-x-3">
+            <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Facebook">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22 12a10 10 0 10-11.63 9.87v-6.99h-2.1v-2.88h2.1v-2.2c0-2.08 1.24-3.23 3.13-3.23.91 0 1.86.16 1.86.16v2.04h-1.05c-1.04 0-1.36.64-1.36 1.3v1.56h2.32l-.37 2.88h-1.95V21.87A10 10 0 0022 12z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Twitter">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.4 1a9.1 9.1 0 01-2.83 1.08 4.48 4.48 0 00-7.64 4.1A12.71 12.71 0 013 4.1a4.48 4.48 0 001.38 6A4.41 4.41 0 012 9v.05a4.48 4.48 0 003.6 4.4 4.48 4.48 0 01-2 .08 4.48 4.48 0 004.18 3.12A9 9 0 012 19.54a12.67 12.67 0 006.29 1.84c7.55 0 11.69-6.29 11.69-11.75 0-.18 0-.35-.01-.53A8.18 8.18 0 0023 3z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Instagram">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zM12 8a4 4 0 100 8 4 4 0 000-8zm5-1a1 1 0 110 2 1 1 0 010-2z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition" aria-label="LinkedIn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4zM8 8h3.6v2.2H11c.5-1 2-2 4.3-2 4.6 0 5.7 3 5.7 6.8V24h-4v-6.7c0-1.6-.1-3.7-2.3-3.7-2.3 0-2.7 1.8-2.7 3.6V24H8z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    
+  
+      <div class="border-t border-gray-700 mt-12 pt-6 text-center text-[14px] text-gray-500">
+        &copy; 2025 Shifa Home Services. All rights reserved.
+      </div>
+    </footer>
+        
+        
+    
+<footer class="bg-gray-900 text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-[15px]">
+  
+   
+      <div>
+        <img src="/logo.png" alt="Shifa Home Services" class="w-36 mb-4">
+        <p class="text-gray-400">
+          Shifa is your trusted partner for professional, reliable home cleaning and maintenance services.
+        </p>
+      </div>
+  
+    
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#" class="hover:text-white transition">Home</a></li>
+          <li><a href="#" class="hover:text-white transition">About Us</a></li>
+          <li><a href="#" class="hover:text-white transition">Services</a></li>
+          <li><a href="#" class="hover:text-white transition">Packages</a></li>
+          <li><a href="#" class="hover:text-white transition">Contact</a></li>
+        </ul>
+      </div>
+  
+
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contact</h3>
+        <p class="text-white flex items-start gap-3 mb-2">
+          <svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M164.39,145.34a8,8,0,0,1,7.59-.69l47.16,21.13a8,8,0,0,1,4.8,8.3A48.33,48.33,0,0,1,176,216,136,136,0,0,1,40,80,48.33,48.33,0,0,1,81.92,32.06a8,8,0,0,1,8.3,4.8l21.13,47.2a8,8,0,0,1-.66,7.53L89.32,117a7.93,7.93,0,0,0-.54,7.81c8.27,16.93,25.77,34.22,42.75,42.41a7.92,7.92,0,0,0,7.83-.59Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+          +91 98765 43210
+        </p>
+        <p class="text-white flex items-start gap-3 mb-2">
+          <svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M32,56H224a0,0,0,0,1,0,0V192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V56A0,0,0,0,1,32,56Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><polyline points="224 56 128 144 32 56" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+          support@shifaservices.com
+        </p>
+        <p class="text-white flex items-start gap-3">
+          <svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><circle cx="128" cy="104" r="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M208,104c0,72-80,128-80,128S48,176,48,104a80,80,0,0,1,160,0Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+          123 Shifa Lane, New Delhi
+        </p>
+      </div>
+  
+
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+        <div class="flex space-x-3">
+          <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Facebook">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22 12a10 10 0 10-11.63 9.87v-6.99h-2.1v-2.88h2.1v-2.2c0-2.08 1.24-3.23 3.13-3.23.91 0 1.86.16 1.86.16v2.04h-1.05c-1.04 0-1.36.64-1.36 1.3v1.56h2.32l-.37 2.88h-1.95V21.87A10 10 0 0022 12z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Twitter">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.4 1a9.1 9.1 0 01-2.83 1.08 4.48 4.48 0 00-7.64 4.1A12.71 12.71 0 013 4.1a4.48 4.48 0 001.38 6A4.41 4.41 0 012 9v.05a4.48 4.48 0 003.6 4.4 4.48 4.48 0 01-2 .08 4.48 4.48 0 004.18 3.12A9 9 0 012 19.54a12.67 12.67 0 006.29 1.84c7.55 0 11.69-6.29 11.69-11.75 0-.18 0-.35-.01-.53A8.18 8.18 0 0023 3z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Instagram">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zM12 8a4 4 0 100 8 4 4 0 000-8zm5-1a1 1 0 110 2 1 1 0 010-2z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition" aria-label="LinkedIn">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4zM8 8h3.6v2.2H11c.5-1 2-2 4.3-2 4.6 0 5.7 3 5.7 6.8V24h-4v-6.7c0-1.6-.1-3.7-2.3-3.7-2.3 0-2.7 1.8-2.7 3.6V24H8z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="border-t border-gray-700 mt-12 pt-6 text-center text-[14px] text-gray-500">
+      &copy; 2025 Shifa Home Services. All rights reserved.
+    </div>
+  </footer>   
+  
+  
+  <script>
+    const testimonials = [
+      {
+        name: "Aisha Khan",
+        location: "New Delhi",
+        img: "https://randomuser.me/api/portraits/women/44.jpg",
+        message: "The Shifa team was amazing! My house has never looked better. I’m definitely booking again."
+      },
+      {
+        name: "Rahul Mehta",
+        location: "Gurgaon",
+        img: "https://randomuser.me/api/portraits/men/32.jpg",
+        message: "Professional, punctual, and extremely thorough. Their deep cleaning service is top-notch."
+      },
+      {
+        name: "Neha Verma",
+        location: "Noida",
+        img: "https://randomuser.me/api/portraits/women/65.jpg",
+        message: "Easy to book and great customer service. They handled my move-out cleaning perfectly!"
+      },
+      {
+        name: "Ajay Singh",
+        location: "Delhi",
+        img: "https://randomuser.me/api/portraits/men/45.jpg",
+        message: "Top-class team! Courteous and hardworking staff."
       }
-    
-      function renderTestimonials() {
-        const container = document.getElementById("testimonialSlider");
-        container.innerHTML = "";
-    
-        const visibleCount = getVisibleCardCount();
-        testimonials.slice(startIndex, startIndex + visibleCount).forEach(t => {
-          container.innerHTML += `
-            <div class="bg-gray-100 rounded-md p-6 w-full md:w-1/3 flex-shrink-0">
-              <div class="mb-4 text-center">
-                <img src="${t.img}" alt="Client" class="w-16 h-16 rounded-full mx-auto mb-2">
-                <h4 class="text-lg font-semibold text-gray-800">${t.name}</h4>
-                <p class="text-sm text-gray-500">${t.location}</p>
-              </div>
-              <p class="text-gray-600 text-sm italic text-center">"${t.message}"</p>
-            </div>`;
-        });
-      }
-    
-      function openModal() {
-        document.getElementById("testimonialModal").classList.remove("hidden");
-        document.getElementById("testimonialModal").classList.add("flex");
-      }
-    
-      function closeModal() {
-        document.getElementById("testimonialModal").classList.add("hidden");
-      }
-    
-      function addTestimonial() {
-        const name = document.getElementById("name").value;
-        const location = document.getElementById("location").value;
-        const img = document.getElementById("image").value || "https://via.placeholder.com/64";
-        const message = document.getElementById("message").value;
-        if (name && location && message) {
-          testimonials.push({ name, location, img, message });
-          closeModal();
-          startIndex = Math.max(0, testimonials.length - getVisibleCardCount());
-          renderTestimonials();
-        } else {
-          alert("Please fill out all fields");
-        }
-      }
-    
-      document.getElementById("prev").onclick = () => {
-        if (startIndex > 0) {
-          startIndex--;
-          renderTestimonials();
-        }
-      };
-    
-      document.getElementById("next").onclick = () => {
-        const visibleCount = getVisibleCardCount();
-        if (startIndex < testimonials.length - visibleCount) {
-          startIndex++;
-          renderTestimonials();
-        }
-      };
-    
-      window.addEventListener("resize", () => {
-        renderTestimonials();
+    ];
+  
+    let startIndex = 0;
+  
+    function getVisibleCardCount() {
+      return window.innerWidth < 768 ? 1 : 3;
+    }
+  
+    function renderTestimonials() {
+      const container = document.getElementById("testimonialSlider");
+      container.innerHTML = "";
+  
+      const visibleCount = getVisibleCardCount();
+      testimonials.slice(startIndex, startIndex + visibleCount).forEach(t => {
+        container.innerHTML += `
+          <div class="bg-gray-100 rounded-md p-6 w-full md:w-1/3 flex-shrink-0">
+            <div class="mb-4 text-center">
+              <img src="${t.img}" alt="Client" class="w-16 h-16 rounded-full mx-auto mb-2">
+              <h4 class="text-lg font-semibold text-gray-800">${t.name}</h4>
+              <p class="text-sm text-gray-500">${t.location}</p>
+            </div>
+            <p class="text-gray-600 text-sm italic text-center">"${t.message}"</p>
+          </div>`;
       });
-    
+    }
+  
+    function openModal() {
+      document.getElementById("testimonialModal").classList.remove("hidden");
+      document.getElementById("testimonialModal").classList.add("flex");
+    }
+  
+    function closeModal() {
+      document.getElementById("testimonialModal").classList.add("hidden");
+    }
+  
+    function addTestimonial() {
+      const name = document.getElementById("name").value;
+      const location = document.getElementById("location").value;
+      const img = document.getElementById("image").value || "https://via.placeholder.com/64";
+      const message = document.getElementById("message").value;
+      if (name && location && message) {
+        testimonials.push({ name, location, img, message });
+        closeModal();
+        startIndex = Math.max(0, testimonials.length - getVisibleCardCount());
+        renderTestimonials();
+      } else {
+        alert("Please fill out all fields");
+      }
+    }
+  
+    document.getElementById("prev").onclick = () => {
+      if (startIndex > 0) {
+        startIndex--;
+        renderTestimonials();
+      }
+    };
+  
+    document.getElementById("next").onclick = () => {
+      const visibleCount = getVisibleCardCount();
+      if (startIndex < testimonials.length - visibleCount) {
+        startIndex++;
+        renderTestimonials();
+      }
+    };
+  
+    window.addEventListener("resize", () => {
       renderTestimonials();
-    </script>
-    
+    });
+  
+    renderTestimonials();
+  </script>
+
+        <script>
+          const navbar = document.getElementById("navbar");
+          const links = document.querySelectorAll(".nav-link");
+          const menuBtn = document.getElementById("mobile-menu-button");
+          const menuIcon = document.getElementById("menu-icon");
+          const mobileMenu = document.getElementById("mobile-menu");
         
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-        <footer class="bg-gray-900 text-white py-16 px-6">
-          <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-[15px]">
+          window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+              navbar.classList.remove("bg-transparent", "text-white");
+              navbar.classList.add("bg-white", "text-black","shadow-sm");
         
-            <!-- Logo & Description -->
-            <div>
-              <img src="/logo.png" alt="Shifa Home Services" class="w-36 mb-4">
-              <p class="text-gray-400">
-                Shifa is your trusted partner for professional, reliable home cleaning and maintenance services.
-              </p>
-            </div>
+              links.forEach(link => {
+                link.classList.remove("text-white");
+                link.classList.add("text-black");
+              });
         
-            <!-- Quick Links -->
-            <div>
-              <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-              <ul class="space-y-2 text-gray-400">
-                <li><a href="#" class="hover:text-white transition">Home</a></li>
-                <li><a href="#" class="hover:text-white transition">About Us</a></li>
-                <li><a href="#" class="hover:text-white transition">Services</a></li>
-                <li><a href="#" class="hover:text-white transition">Packages</a></li>
-                <li><a href="#" class="hover:text-white transition">Contact</a></li>
-              </ul>
-            </div>
+              menuIcon.classList.remove("text-white");
+              menuIcon.classList.add("text-black");
+            } else {
+              navbar.classList.remove("bg-white", "text-black", "shadow-md");
+              navbar.classList.add("bg-transparent", "text-white");
         
-            <!-- Contact Info -->
-            <div>
-              <h3 class="text-lg font-semibold mb-4">Contact</h3>
-              <p class="text-white flex items-start gap-3 mb-2">
-                <svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M164.39,145.34a8,8,0,0,1,7.59-.69l47.16,21.13a8,8,0,0,1,4.8,8.3A48.33,48.33,0,0,1,176,216,136,136,0,0,1,40,80,48.33,48.33,0,0,1,81.92,32.06a8,8,0,0,1,8.3,4.8l21.13,47.2a8,8,0,0,1-.66,7.53L89.32,117a7.93,7.93,0,0,0-.54,7.81c8.27,16.93,25.77,34.22,42.75,42.41a7.92,7.92,0,0,0,7.83-.59Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
-                +91 98765 43210
-              </p>
-              <p class="text-white flex items-start gap-3 mb-2">
-                <svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M32,56H224a0,0,0,0,1,0,0V192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V56A0,0,0,0,1,32,56Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><polyline points="224 56 128 144 32 56" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
-                support@shifaservices.com
-              </p>
-              <p class="text-white flex items-start gap-3">
-                <svg class="w-5 h-5 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><circle cx="128" cy="104" r="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M208,104c0,72-80,128-80,128S48,176,48,104a80,80,0,0,1,160,0Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
-                123 Shifa Lane, New Delhi
-              </p>
-            </div>
+              links.forEach(link => {
+                link.classList.remove("text-black");
+                link.classList.add("text-white");
+              });
         
-            <!-- Social Media -->
-            <div>
-              <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
-              <div class="flex space-x-3">
-                <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Facebook">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M22 12a10 10 0 10-11.63 9.87v-6.99h-2.1v-2.88h2.1v-2.2c0-2.08 1.24-3.23 3.13-3.23.91 0 1.86.16 1.86.16v2.04h-1.05c-1.04 0-1.36.64-1.36 1.3v1.56h2.32l-.37 2.88h-1.95V21.87A10 10 0 0022 12z"/>
-                  </svg>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Twitter">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.4 1a9.1 9.1 0 01-2.83 1.08 4.48 4.48 0 00-7.64 4.1A12.71 12.71 0 013 4.1a4.48 4.48 0 001.38 6A4.41 4.41 0 012 9v.05a4.48 4.48 0 003.6 4.4 4.48 4.48 0 01-2 .08 4.48 4.48 0 004.18 3.12A9 9 0 012 19.54a12.67 12.67 0 006.29 1.84c7.55 0 11.69-6.29 11.69-11.75 0-.18 0-.35-.01-.53A8.18 8.18 0 0023 3z"/>
-                  </svg>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Instagram">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zM12 8a4 4 0 100 8 4 4 0 000-8zm5-1a1 1 0 110 2 1 1 0 010-2z"/>
-                  </svg>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-white transition" aria-label="LinkedIn">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4zM8 8h3.6v2.2H11c.5-1 2-2 4.3-2 4.6 0 5.7 3 5.7 6.8V24h-4v-6.7c0-1.6-.1-3.7-2.3-3.7-2.3 0-2.7 1.8-2.7 3.6V24H8z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
+              menuIcon.classList.remove("text-black");
+              menuIcon.classList.add("text-white");
+            }
+          });
         
-          <!-- Horizontal Line & Copyright -->
-          <div class="border-t border-gray-700 mt-12 pt-6 text-center text-[14px] text-gray-500">
-            &copy; 2025 Shifa Home Services. All rights reserved.
-          </div>
-        </footer>
+          menuBtn.addEventListener("click", (e) => {
+            e.stopPropagation(); 
+            mobileMenu.classList.toggle("hidden");
+          });
         
-        
-    
-
-
-
+          document.addEventListener("click", (e) => {
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+              mobileMenu.classList.add("hidden");
+            }
+          });
+        </script>
 </body>
 </html>
