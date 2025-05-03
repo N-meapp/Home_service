@@ -110,26 +110,7 @@ const navbar = document.getElementById("navbar");
       });
     });
   
-    const confirmBtn = document.getElementById("confirmBtn");
-    const successMsg = document.getElementById("successMsg");
-    const confirmedDates = document.getElementById("confirmedDates");
-    const confirmedTime = document.getElementById("confirmedTime");
-  
-    confirmBtn.addEventListener("click", () => {
-      const d1 = document.getElementById("date1").value;
-      const d2 = secondDateShown ? document.getElementById("date2").value : null;
-  
-      if (!d1 || !selectedTime) {
-        alert("Please select at least one date and a time slot.");
-        return;
-      }
-  
-      confirmBtn.disabled = true;
-      confirmBtn.textContent = "Confirmed!";
-      successMsg.classList.remove("hidden");
-      confirmedDates.innerText = d2 ? `${d1} & ${d2}` : d1;
-      confirmedTime.innerText = `Time: ${selectedTime}`;
-    });
+   
 
 
 
