@@ -13,3 +13,8 @@
 .not-emoji {
   font-family: sans-serif; 
 }
+
+
+body{
+  overflow-x: hidden;
+}
